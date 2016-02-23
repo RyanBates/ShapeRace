@@ -3430,8 +3430,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'builds.data';
-    var REMOTE_PACKAGE_BASE = 'builds.data';
+    var PACKAGE_NAME = 'build.data';
+    var REMOTE_PACKAGE_BASE = 'build.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -3440,8 +3440,8 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
-      var REMOTE_PACKAGE_SIZE = 3723692;
-      var PACKAGE_UUID = '34ad8963-ce7b-4c33-ba65-b8498902f994';
+      var REMOTE_PACKAGE_SIZE = 19045257;
+      var PACKAGE_UUID = '816ac650-5388-4f56-98ea-340100616b9d';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -3545,11 +3545,11 @@ Module['FS_createPath']('/Managed/mono', '2.0', true, true);
       },
     };
 
-      new DataRequest(0, 384525, 0, 0).open('GET', '/data.unity3d');
-    new DataRequest(384525, 385970, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(385970, 2199374, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(2199374, 3696066, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(3696066, 3723692, 0, 0).open('GET', '/Managed/mono/2.0/machine.config');
+      new DataRequest(0, 15705258, 0, 0).open('GET', '/data.unity3d');
+    new DataRequest(15705258, 15706703, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(15706703, 17520939, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(17520939, 19017631, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(19017631, 19045257, 0, 0).open('GET', '/Managed/mono/2.0/machine.config');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -3564,10 +3564,10 @@ Module['FS_createPath']('/Managed/mono', '2.0', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Managed/mono/2.0/machine.config"].onload();
-          Module['removeRunDependency']('datafile_builds.data');
+          Module['removeRunDependency']('datafile_build.data');
 
     };
-    Module['addRunDependency']('datafile_builds.data');
+    Module['addRunDependency']('datafile_build.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   

@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/P1 Small Track.unity
-  isLoaded: 1
-  isActive: 1
